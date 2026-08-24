@@ -46,21 +46,21 @@ portfolio/
 
 ## Mettre le site en ligne sur GitHub Pages (recommandé, gratuit)
 
-Le site est configuré pour `https://hybripat.github.io` : URL propre, hébergement
+Le site est configuré pour `https://patrice-rai.github.io` : URL propre, hébergement
 gratuit et illimité dans le temps, et un bon signal pour un profil de développeur.
 
 ### Étape 1 — Créer un compte GitHub
 
 1. Allez sur [github.com](https://github.com) et cliquez sur **Sign up**.
 2. Suivez les étapes (adresse e-mail, mot de passe, nom d'utilisateur).
-   Vous avez déjà le compte **HybriPat** : connectez-vous simplement.
+   Vous avez déjà le compte **patrice-rai** : connectez-vous simplement.
 
 ### Étape 2 — Créer un dépôt (repository)
 
 1. Une fois connecté, cliquez sur le bouton **+** en haut à droite, puis **New repository**.
-2. Dans **Repository name**, tapez exactement : `hybripat.github.io` (votre nom
+2. Dans **Repository name**, tapez exactement : `patrice-rai.github.io` (votre nom
    d'utilisateur suivi de `.github.io` — c'est ce qui donne l'adresse racine
-   `https://hybripat.github.io/`, celle pour laquelle le site est configuré).
+   `https://patrice-rai.github.io/`, celle pour laquelle le site est configuré).
 3. Laissez le dépôt en **Public** (obligatoire pour GitHub Pages gratuit).
 4. Ne cochez rien d'autre, puis cliquez sur **Create repository**.
 
@@ -88,7 +88,7 @@ Le plus simple, sans rien installer :
 3. Dans **Build and deployment → Source**, choisissez **Deploy from a branch**.
 4. Dans **Branch**, sélectionnez `main`, dossier `/ (root)`, puis **Save**.
 5. Patientez 1 à 3 minutes, puis rechargez la page : l'adresse de votre site
-   apparaît en haut (`https://hybripat.github.io/`).
+   apparaît en haut (`https://patrice-rai.github.io/`).
 
 ### Étape 5 — Vérifier
 

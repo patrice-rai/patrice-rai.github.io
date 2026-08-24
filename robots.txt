@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hybripat.github.io/sitemap.xml
+Sitemap: https://patrice-rai.github.io/sitemap.xml
