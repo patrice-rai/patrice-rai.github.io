@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patrice RAÏ — Développeur Full-Stack &amp; Data | Analyse de données et datavisualisation&nbsp;: un classement comparatif de candidats</title>
+  <meta name="description" content="Analyse de vœux Parcoursup en Python : Pandas, méthode de Borda et datavisualisations Matplotlib pour un classement comparatif de candidats — réalisation R5 de Patrice RAÏ.">
+  <link rel="canonical" href="https://hybripat.github.io/realisations/analyse-donnees-datavisualisation.html">
+  <meta property="og:title" content="Patrice RAÏ — Développeur Full-Stack &amp; Data | Analyse de données et datavisualisation : un classement comparatif de candidats">
+  <meta property="og:description" content="Analyse de vœux Parcoursup en Python : Pandas, méthode de Borda et datavisualisations Matplotlib pour un classement comparatif de candidats — réalisation R5 de Patrice RAÏ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hybripat.github.io/realisations/analyse-donnees-datavisualisation.html">
+  <meta property="og:image" content="https://hybripat.github.io/img/photo.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>try{var t=localStorage.getItem("theme");if(t==="clair"){document.documentElement.setAttribute("data-theme","clair");}}catch(e){}</script>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+<header class="entete-site">
+  <div class="conteneur barre-entete">
+    <a class="marque" href="../index.html">
+      <img class="marque-photo" src="../img/photo.jpg" alt="Patrice RAÏ" width="38" height="38" onerror="this.onerror=null;this.src='../img/avatar.svg';">
+      <span>Patrice&nbsp;RAÏ</span>
+    </a>
+    <nav class="nav-principale" aria-label="Navigation principale">
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir ou fermer le menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <ul class="menu" id="menu-principal">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../presentation.html">Présentation</a></li>
+        <li class="a-sous-menu">
+          <a href="../competences.html">Compétences</a>
+          <button class="bouton-sous-menu" type="button" aria-expanded="false" aria-label="Ouvrir le sous-menu des compétences"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <ul class="sous-menu"><li><a href="../competences/developpement-web-full-stack.html"><span class="code">T1</span> Développement web full-stack</a></li><li><a href="../competences/architecture-logicielle-modelisation-donnees.html"><span class="code">T2</span> Architectures &amp; modélisation</a></li><li><a href="../competences/ingenierie-donnees-pipelines-etl.html"><span class="code">T3</span> Ingénierie de données &amp; ETL</a></li><li><a href="../competences/integration-personnalisation-wordpress.html"><span class="code">T4</span> Intégration WordPress</a></li><li><a href="../competences/exploitation-supervision-qualite-donnees.html"><span class="code">T5</span> Exploitation &amp; qualité des données</a></li><li><a href="../competences/autonomie-auto-formation.html"><span class="code">H1</span> Autonomie &amp; auto-formation</a></li><li><a href="../competences/ecoute-traduction-besoins-metier.html"><span class="code">H2</span> Écoute des besoins métier</a></li><li><a href="../competences/coordination-animation-collectifs.html"><span class="code">H3</span> Coordination de collectifs</a></li><li><a href="../competences/relation-client-sens-du-service.html"><span class="code">H4</span> Relation client &amp; service</a></li><li><a href="../competences/pensee-reflexive-autocritique.html"><span class="code">H5</span> Pensée réflexive &amp; autocritique</a></li></ul>
+        </li>
+        <li class="a-sous-menu">
+          <a href="../realisations.html" aria-current="true">Réalisations</a>
+          <button class="bouton-sous-menu" type="button" aria-expanded="false" aria-label="Ouvrir le sous-menu des réalisations"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <ul class="sous-menu"><li><a href="../realisations/plateforme-recouvrement-facturation.html"><span class="code">R1</span> Recouvrement santé</a></li><li><a href="../realisations/migration-pipeline-ssis-python.html"><span class="code">R2</span> Migration SSIS → Python</a></li><li><a href="../realisations/plateforme-multi-sites-paroissiale.html"><span class="code">R3</span> Multi-sites paroissial</a></li><li><a href="../realisations/prestation-web-independante.html"><span class="code">R4</span> Prestation web</a></li><li><a href="../realisations/analyse-donnees-datavisualisation.html" aria-current="page"><span class="code">R5</span> Datavisualisation</a></li></ul>
+        </li>
+        <li><a href="../parcours.html">Parcours</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li class="item-theme"><button class="bouton-theme" id="bouton-theme" type="button" aria-label="Basculer entre le thème sombre et le thème clair"><svg class="icone-lune" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icone-soleil" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+<div class="bandeau-page fond-kolam">
+  <div class="conteneur">
+    <p class="fil-ariane"><a href="../index.html">Accueil</a> › <a href="../realisations.html">Réalisations</a> › R5</p>
+    <h1>Analyse de données et datavisualisation&nbsp;: un classement comparatif de candidats</h1>
+    <p class="sous-titre"><span class="badge">Projet de formation</span></p>
+    <ul class="etiquettes" aria-label="Technologies principales"><li><span class="etiquette">Python</span></li><li><span class="etiquette">Pandas</span></li><li><span class="etiquette">Matplotlib</span></li><li><span class="etiquette">Jupyter</span></li></ul>
+  </div>
+</div>
+<div class="conteneur-etroit">
+  <article class="article-page">
+    <div class="galerie"><figure>
+  <a class="zoom-image" href="../img/realisations/analyse-donnees-datavisualisation-1.png"><img src="../img/realisations/analyse-donnees-datavisualisation-1.png" alt="Aperçu des données : candidatures validées, genre, boursiers, départements et lycées de provenance (diapositive de la soutenance)." loading="lazy"></a>
+  <figcaption>Aperçu des données&nbsp;: candidatures validées, genre, boursiers, départements et lycées de provenance (diapositive de la soutenance).</figcaption>
+</figure><figure>
+  <a class="zoom-image" href="../img/realisations/analyse-donnees-datavisualisation-2.png"><img src="../img/realisations/analyse-donnees-datavisualisation-2.png" alt="Profil des candidats retenus dans le classement des bacheliers technologiques : répartitions et provenance (diapositive de la soutenance)." loading="lazy"></a>
+  <figcaption>Profil des candidats retenus dans le classement des bacheliers technologiques&nbsp;: répartitions et provenance (diapositive de la soutenance).</figcaption>
+</figure><figure>
+  <a class="zoom-image" href="../img/realisations/analyse-donnees-datavisualisation-3.png"><img src="../img/realisations/analyse-donnees-datavisualisation-3.png" alt="Étude bonus : corrélation entre les moyennes de mathématiques et de physique des candidats (diapositive de la soutenance)." loading="lazy"></a>
+  <figcaption>Étude bonus&nbsp;: corrélation entre les moyennes de mathématiques et de physique des candidats (diapositive de la soutenance).</figcaption>
+</figure></div>
+<h2>Présentation</h2>
+<p>Cette réalisation est un projet de formation mené en binôme en troisième année de BUT Informatique&nbsp;: une chaîne complète d’analyse de données et de datavisualisation, développée sous Jupyter avec Python, Pandas et Matplotlib, sur un cas bien réel&nbsp;: les vœux Parcoursup adressés à une formation de notre IUT, soit 2&nbsp;260 candidatures à traiter. Le livrable&nbsp;: un classement comparatif des candidats, fondé sur des critères explicites et restitué par des visualisations.</p>
+
+<h2>Objectifs, contexte, enjeux et risques</h2>
+<p>Le contexte&nbsp;: une SAE (situation d’apprentissage et d’évaluation), le format de projet du BUT qui place les étudiants en conditions professionnelles. Le sujet simule le travail d’une commission d’examen des vœux&nbsp;: partir des données brutes et aboutir à un classement explicable, pour 74 places réparties entre bacheliers technologiques et autres profils. Les enjeux&nbsp;: comparer équitablement des candidats aux parcours très différents (bacs généraux, technologiques, professionnels, DAEU) et respecter les dispositifs légaux d’égalité d’accès, comme le taux de boursiers et la répartition des places. Les risques&nbsp;: des données incomplètes (les notes disponibles varient selon les séries), des critères biaisés en faveur d’un profil, et un classement inexploitable si la méthode n’est pas transparente.</p>
+
+<h2>Les étapes</h2>
+<p>D’abord, l’exploration et le nettoyage du DataFrame Pandas&nbsp;: sur 2&nbsp;260 vœux, 185 non confirmés ont été écartés pour travailler sur 2&nbsp;075 candidatures (1&nbsp;165 bacs généraux, 847 technologiques, 55 professionnels, 8 DAEU). Ensuite, la segmentation par filtres&nbsp;: série de bac, primo-entrant ou non, boursier, départements de l’académie. Puis le filtrage des notes&nbsp;: normalisation des moyennes de chaque candidat et notes plancher en mathématiques et en français. Le cœur du projet&nbsp;: le classement par la méthode de Borda, qui attribue des points selon la position de chaque candidat sur chaque critère puis les additionne, complété par un bonus de points pour les candidats boursiers afin de respecter les dispositifs légaux. Enfin, les datavisualisations Matplotlib (répartitions, lycées de provenance, taux de boursiers) et la soutenance devant les enseignants.</p>
+
+<h2>Les acteurs</h2>
+<p>Le projet s’est mené en binôme, avec une répartition claire des tâches et une relecture croisée systématique&nbsp;: chacun vérifiait les transformations de l’autre. Les enseignants du BUT ont cadré le sujet et évalué le livrable, en jouant le rôle de la commission à convaincre.</p>
+
+<h2>Les résultats</h2>
+<p>Pour le module&nbsp;: deux classements livrés (bacheliers technologiques et autres profils), accompagnés de graphiques de contrôle vérifiant la conformité aux dispositifs légaux, le tout défendu en soutenance. En bonus, une étude de corrélation entre les moyennes de mathématiques et de physique, qui a démenti notre intuition&nbsp;: la corrélation mesurée était faible. Pour moi&nbsp;: des bases solides en Pandas et Matplotlib, une culture de la donnée propre et une sensibilité durable aux biais des critères de sélection.</p>
+
+<h2>Les lendemains du projet</h2>
+<p>Dans le futur immédiat&nbsp;: les réflexes acquis (nettoyer avant de calculer, documenter chaque transformation) ont servi dans les projets suivants du BUT. À distance&nbsp;: ce projet a préparé mon alternance, où je retrouve les mêmes gestes, filtres de périmètre, indicateurs vérifiés et restitutions lisibles par des non-techniciens. Aujourd’hui&nbsp;: ces méthodes sont réinvesties chaque semaine dans mes traitements Python.</p>
+
+<h2>Mon regard critique</h2>
+<p>La leçon principale&nbsp;: un classement n’est jamais neutre. Les notes plancher, la normalisation et la pondération orientent le résultat, et l’obligation d’intégrer les dispositifs légaux nous a fait comprendre qu’un algorithme de sélection traduit des choix de société, pas seulement des mathématiques. Le bonus l’a confirmé autrement&nbsp;: notre intuition sur le lien entre moyennes de maths et de physique était fausse, et seule la mesure l’a montré. Avec le recul, des tests automatisés sur les transformations auraient sécurisé la chaîne davantage que nos vérifications manuelles. Et le nettoyage, partie la moins gratifiante, s’est révélé décisif pour la crédibilité du résultat.</p>
+
+    <h2 id="competences-rattachees">Compétences rattachées</h2>
+    <p>Les compétences que cette réalisation met en œuvre, issues de la matrice compétences ↔ réalisations du portfolio.</p>
+    <ul class="liste-liens-rattaches"><li>
+  <p class="titre-lien"><a href="../competences/ingenierie-donnees-pipelines-etl.html">T3 — Ingénierie de données et pipelines ETL (SSIS, Python)</a> <span class="note-competence">(7/10)</span></p>
+  <p>Concevoir, déboguer et migrer des pipelines de données fiables&nbsp;: de SSIS vers Python orchestré sous Airflow, de SQL Server vers PostgreSQL.</p>
+</li><li>
+  <p class="titre-lien"><a href="../competences/autonomie-auto-formation.html">H1 — Autonomie et capacité d’auto-formation</a> <span class="note-competence">(8/10)</span></p>
+  <p>Monter seul en compétence sur un outil, un langage ou un domaine inconnu, puis transformer cet apprentissage en résultat concret.</p>
+</li><li>
+  <p class="titre-lien"><a href="../competences/pensee-reflexive-autocritique.html">H5 — Pensée réflexive et autocritique</a> <span class="note-competence">(6,5/10)</span></p>
+  <p>Prendre du recul sur sa pratique&nbsp;: évaluer ses choix, reconnaître ses limites et en tirer des règles d’action concrètes.</p>
+</li></ul>
+    <h2>Dans la constellation du portfolio</h2>
+<p>Le schéma ci-dessous replace cette page dans la navigation circulaire du portfolio&nbsp;: chaque nœud est un lien cliquable.</p>
+<div class="constellation-cadre">
+  <div class="constellation" data-constellation data-focus="R5" data-prefixe="../"></div>
+</div>
+  </article>
+</div>
+
+</main>
+<footer class="pied-site">
+  <div class="conteneur grille-pied">
+    <div>
+      <p class="pied-titre">Patrice RAÏ</p>
+      <p>Développeur Full-Stack &amp; Data — Expert en Ingénierie du Logiciel en alternance. Du besoin métier à la mise en production, avec une exigence&nbsp;: un code utile, maintenable et respectueux des données.</p>
+    </div>
+    <div>
+      <h2 class="pied-titre">Coordonnées</h2>
+      <ul>
+        <li class="ligne-coordonnee"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:rai.patrice.pro@gmail.com">rai.patrice.pro@gmail.com</a></li>
+        <li class="ligne-coordonnee"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+33652345164">06 52 34 51 64</a></li>
+        <li class="ligne-coordonnee"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg><a target="_blank" href="https://fr.linkedin.com/in/patrice-rai" rel="noopener">LinkedIn — Patrice RAÏ</a></li>
+        <li class="ligne-coordonnee"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><a target="_blank" href="https://github.com/HybriPat/" rel="noopener">GitHub — HybriPat</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="pied-titre">Navigation</h2>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../presentation.html">Présentation</a></li>
+        <li><a href="../competences.html">Compétences</a></li>
+        <li><a href="../realisations.html">Réalisations</a></li>
+        <li><a href="../parcours.html">Parcours</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>© 2026 Patrice RAÏ — Portfolio réalisé dans le cadre du Mastère Expert en Ingénierie du Logiciel (ISCOD).</p></div>
+</footer>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
